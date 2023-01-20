@@ -32,10 +32,15 @@ std::string rxValue; // Could also make this a global var to access it in loop()
 
 // See the following for generating UUIDs:
 // https://www.uuidgenerator.net/
+//
+//#define SERVICE_UUID           "ce21fcf8-9027-11ed-a1eb-0242ac120002" // UART service UUID
+//#define CHARACTERISTIC_UUID_RX "ce22005e-9027-11ed-a1eb-0242ac120002"
+//#define CHARACTERISTIC_UUID_TX "ce220180-9027-11ed-a1eb-0242ac120002"
 
-#define SERVICE_UUID           "ce21fcf8-9027-11ed-a1eb-0242ac120002" // UART service UUID
-#define CHARACTERISTIC_UUID_RX "ce22005e-9027-11ed-a1eb-0242ac120002"
-#define CHARACTERISTIC_UUID_TX "ce220180-9027-11ed-a1eb-0242ac120002"
+
+#define SERVICE_UUID           "6E400001-B5A3-F393-E0A9-E50E24DCCA9E" // UART service UUID
+#define CHARACTERISTIC_UUID_RX "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
+#define CHARACTERISTIC_UUID_TX "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
 
 class MyServerCallbacks: public NimBLEServerCallbacks {
     void onConnect(NimBLEServer* pServer) {
